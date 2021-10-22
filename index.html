@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+    h2.heading{
+        color: rgb(43, 43, 230) ;
+    }
+
+.column-layout{
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.main-column{
+    flex :1;
+    order :2;
+}
+
+.sidebar-1{
+    flex : 1;
+    order :3;
+}
+
+.sidebar-2 {
+    flex : 1;
+
+    order :1;
+}
+
+@media (min-width:900px){
+    .call-outs-container{
+
+    display: flex;
+ justify-content:space-between;
+    }
+
+}
+
+.call-outs-container{
+
+ margin: 10px 10px 10px 10px;
+}
+
+.call-out{
+  padding: 20px;
+  box-sizing: border-box;
+  flex-basis: 32%;
+  margin-bottom: 20px;
+}
+
+.call-out:nth-child(1) {
+    background-color: #c0dbe2;
+}
+
+.call-out:nth-child(2){
+    background-color: #cdf1c3;
+}
+
+.call-out:nth-child(3){
+    background-color: #ccb9da;
+}
+
+</style>
+
+</head>
+<body>
+    
+<h2 class="heading">Flexbox Normal Example : </h2>
+<div class="column-layout">
+
+<div class="main-column">
+        <h2>Main Column</h2>
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
+            been the industry's standard dummy text ever since the 1500s, when an 
+            unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, 
+            remaining essentially unchanged. It was popularised in the 1960s with the release of 
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+            software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+         <p>
+
+            Text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy textLorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently 
+            with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+         </p>   
+</div>
+
+<div class="sidebar-1">
+    <h2>Main Column</h2>
+    <p> 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam </p>
+</div>
+
+<div class="sidebar-2">
+    <h2>Main Column</h2>
+    <p> 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam </p>
+</div>
+
+</div>
+
+
+<h2 class="heading">Space Between Example : </h2>
+<div class="call-outs-container">
+
+<div class="call-out">
+    <h3>Call Out 1</h3>
+    industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen book. 
+    It has survived not only five centuries, but also the leap into electronic typesetting, 
+    remaining essentially unchanged.
+</div>
+
+
+<div class="call-out">
+    <h3>Call Out 2</h3>
+    been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen book. 
+    It has survived not only five centuries, but also the leap into electronic typesetting, 
+    remaining essentially unchanged.
+</div>
+
+
+<div class="call-out">
+    <h3>Call Out 3</h3>
+    Text of the printing and typesetting industry. 
+    Lorem Ipsum has been the industry's standard dummy textLorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Lorem Ipsum has been the industry's 
+</div>
+
+</div>
+
+<style>
+
+.flex-fixed-w-h-new{
+    display: flex;
+
+    padding: 20px;
+    margin: 20px;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+
+.flex-child{
+    width : 150px;
+    height: 100px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: maroon;
+    font-size: 60px;
+    color:white;
+    
+    margin-bottom: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.banner {
+  display: flex;
+
+  height: 400px;
+  max-width: 700px;
+  margin-bottom: 40px auto 40px auto;
+  background-color:green;
+}
+
+.center-me {
+    color :white;
+    font-size: 50px;
+
+    margin: auto;
+}
+
+</style>
+
+<h2 class="heading">Flex Wrap Example </h2> <em>When page is shrinked to small : You can see the result.</em>
+<div class="flex-fixed-w-h-new">
+
+    <div class="flex-child">
+        1
+    </div>
+
+    <div class="flex-child">
+        2
+    </div>
+
+    <div class="flex-child">
+        3
+    </div>
+
+    <div class="flex-child">
+        4
+    </div>
+
+    <div class="flex-child">
+        5
+    </div>
+
+</div>
+
+<h2 class="heading">Flex Banner Example : Text Centering : Vertically / Horizontally</h2>
+<div class="banner">
+    <span class="center-me">
+        Center me ... 
+    </span>
+</div>
+
+
+</body>
+</html>
