@@ -179,7 +179,7 @@
 
 </style>
 
-<h2 class="heading">Flex Wrap Example </h2> <em>When page is shrinked to small : You can see the result.</em>
+<h2 class="heading">Flex Wrap Example </h2> <em>When page is shrinked to small : You can see the result :</em>
 <div class="flex-fixed-w-h-new">
 
     <div class="flex-child">
@@ -204,11 +204,97 @@
 
 </div>
 
-<h2 class="heading">Flex Banner Example : Text Centering : Vertically / Horizontally</h2>
+<h2 class="heading">Flex Banner Example : Text Centering : Vertically / Horizontally :</h2>
 <div class="banner">
     <span class="center-me">
         Center me ... 
     </span>
+</div>
+
+<style>
+
+    .equal-height-container{
+        max-width: 698px;
+      
+        display: flex;
+
+        border: 1px solid black;
+    }
+
+    .first{
+        background-color: white;
+        padding: 20px;
+        flex:1;
+        flex: 1;
+    }
+
+    .second{
+       flex: 1;
+       display: flex;
+       flex-direction: column;
+    }
+
+    .second-a{
+        background-color: yellow;
+        border: 1px solid black;
+        flex: 1;
+    }
+
+    .second-b{
+        background-color: #c0dbe2;
+        flex: 1;
+    }
+
+</style>
+
+<h2 class="heading"> In-Container Equal Hight Columns Example : </h2>
+
+<div class="equal-height-container">
+
+<div class="first">
+
+<p>
+    Lorem Ipsum is simply dummy text of the printing 
+    and typesetting industry. Lorem Ipsum has been 
+ five centuries, but also the leap into electronic 
+ recently with desktop publishing software 
+    like Aldus PageMaker including versions of Lorem 
+    Ipsum.
+</p>
+
+<p>
+    It is a long established fact that a reader will be 
+    distracted by the readable content of a page when 
+    sometimes on purpose (injected humour and the like).
+    their infancy. Various versions have evolved over 
+    the years, sometimes by accident, 
+</p>
+
+<p>
+    There are many variations of passages of 
+    Lorem Ipsum available, but the majority have 
+    isn't anything 
+    embarrassing hidden in the middle of text. 
+    their infancy. Various versions have evolved over 
+    the years, sometimes by accident, 
+</p>
+
+<p>
+    ts layout. The point of using Lorem 
+    as their default model text, and a search for 
+    'lorem ipsum' will uncover many web sites still in 
+    their infancy. Various versions have evolved over 
+    the years, sometimes by accident, 
+      sometimes on purpose (injected humour and the like).
+</p>
+
+</div>
+
+<div class="second">
+    <div class="second-a">A</div>
+    <div class="second-b">B</div>
+</div>
+
 </div>
 
 
