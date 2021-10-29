@@ -6,16 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="./common-style.css">
+
 <style>
 
-    h1.topbanner{
-        text-align: center;
-        color: tomato;
-    }
-
-    h2.heading{
-        color: rgb(43, 43, 230) ;
-    }
 
 .column-layout{
     display: flex;
@@ -38,18 +32,11 @@
     order :1;
 }
 
-@media (min-width:900px){
-    .call-outs-container{
-
-    display: flex;
- justify-content:space-between;
-    }
-
-}
 
 .call-outs-container{
-
- margin: 10px 10px 10px 10px;
+  display: flex;
+  justify-content:space-between;
+  margin: 10px 10px 10px 10px;
 }
 
 .call-out{
@@ -60,15 +47,15 @@
 }
 
 .call-out:nth-child(1) {
-    background-color: #c0dbe2;
+  background-color: #c0dbe2;
 }
 
 .call-out:nth-child(2){
-    background-color: #cdf1c3;
+  background-color: #cdf1c3;
 }
 
 .call-out:nth-child(3){
-    background-color: #ccb9da;
+  background-color: #ccb9da;
 }
 
 </style>
@@ -76,7 +63,7 @@
 </head>
 <body>
 
-    <h1 class="topbanner">Flexbox Tutorial</h2>
+    <h1 class="topbanner">Flexbox Tutorial <em>Learn Web Code </em> <em> Flex box tutorial (css ) : Real Layout Example  </em> </h2>
 
 <h3>2 git commands to remember : </h3>
 
@@ -87,6 +74,57 @@
 </ul>
 
 <h2 class="heading">Flexbox Normal Example : </h2>
+
+<code> 
+
+    <pre>
+
+    &lt;style&gt;
+
+    .container {  
+
+        <b>display : flex;</b>
+
+        <b>flex-direction : row ;</b> 
+
+    }
+
+    .child-1 {
+        
+        <b>flex : 1; </b>
+        
+        <b>order : 2;</b>
+    }
+
+    .child-2 {
+        flex : 1;
+        order : 3;
+    }
+
+    .child-3 {
+        flex : 1;
+        order : 1;
+    }
+
+    &lt;/style&gt;
+
+    &lt;div&gt; 
+
+    &lt;div class=&quot;<b>container</b>&quot;&gt;
+
+    &lt;div class=&quot;<b>child-1</b>&quot; &gt; &lt;/div&gt;
+
+    &lt;div class=&quot;child-1&quot; &gt; &lt;/div&gt;
+
+    &lt;div class=&quot;child-1&quot; &gt; &lt;/div&gt;
+
+    &lt;/div&gt; 
+
+    </pre>
+
+</code>
+
+
 <div class="column-layout">
 
 <div class="main-column">
@@ -122,6 +160,76 @@
 
 
 <h2 class="heading">Space Between Example : </h2>
+
+<code>
+
+<pre>
+
+    &lt;style&gt;
+
+    .call-outs-container{
+
+        display: flex;
+
+        <b>justify-content: space-between;</b>
+
+        margin: 10px 10px 10px 10px;
+
+    }
+
+    .call-out{
+
+        padding: 20px;
+        box-sizing: border-box;
+
+        <b>flex-basis: 32%;</b>
+
+        margin-bottom: 20px;
+
+    }
+
+    .call-out:nth-child(1) {
+        background-color: #c0dbe2;
+    }
+
+    .call-out:nth-child(2){
+        background-color: #cdf1c3;
+    }
+
+    .call-out:nth-child(3){
+        background-color: #ccb9da;
+    }
+  
+    &lt;/style&gt;
+
+
+
+    &lt;div class=&quot;<b>call-outs-container</b>&quot;&gt;
+    
+    &lt;div class=&quot;<b>call-out</b>&quot;&gt;
+        &lt;h3&gt;Call Out 1&lt;/h3&gt;
+        industry's ... 
+    &lt;/div&gt;
+    
+    
+    &lt;div class=&quot;call-out&quot;&gt;
+        &lt;h3&gt;Call Out 2&lt;/h3&gt;
+        been ... 
+    &lt;/div&gt;
+    
+    
+    &lt;div class=&quot;call-out&quot;&gt;
+        &lt;h3&gt;Call Out 3&lt;/h3&gt;
+        Text of ... 
+    &lt;/div&gt;
+    
+    &lt;/div&gt;
+
+</pre>
+
+</code>
+
+
 <div class="call-outs-container">
 
 <div class="call-out">
@@ -173,7 +281,7 @@
     
     margin-bottom: 10px;
     text-align: center;
-    margin: auto;
+   
 }
 
 .banner {
@@ -195,6 +303,74 @@
 </style>
 
 <h2 class="heading">Flex Wrap Example </h2> <em>When page is shrinked to small : You can see the result :</em>
+
+
+<code>
+  
+    <pre>
+
+        &lt;style&gt;
+
+        .flex-fixed-w-h-new{
+
+            display: flex;
+        
+            padding: 20px;
+            margin: 20px;
+            justify-content: space-between;
+        
+            <b>flex-wrap: wrap;</b>
+        }
+        
+        .flex-child{
+
+            width : 150px;
+            height: 100px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: maroon;
+            font-size: 60px;
+            color:white;
+            
+            margin-bottom: 10px;
+            text-align: center;
+           
+        }
+
+        &lt;/style&gt;
+        
+
+
+        &lt;div class=&quot;<b>flex-fixed-w-h-new</b>&quot;&gt;
+        
+            &lt;div class=&quot;<b>flex-child</b>&quot;&gt;
+                1
+            &lt;/div&gt;
+        
+            &lt;div class=&quot;flex-child&quot;&gt;
+                2
+            &lt;/div&gt;
+        
+            &lt;div class=&quot;flex-child&quot;&gt;
+                3
+            &lt;/div&gt;
+        
+            &lt;div class=&quot;flex-child&quot;&gt;
+                4
+            &lt;/div&gt;
+        
+            &lt;div class=&quot;flex-child&quot;&gt;
+                5
+            &lt;/div&gt;
+        
+        &lt;/div&gt;
+
+    </pre>
+
+
+</code>
+
+
+
 <div class="flex-fixed-w-h-new">
 
     <div class="flex-child">
@@ -220,6 +396,44 @@
 </div>
 
 <h2 class="heading">Flex Banner Example : Text Centering : Vertically / Horizontally :</h2>
+
+<code class="html-code">
+    <pre>
+
+      &lt;style&gt;
+
+      .banner {
+
+       <b> display: flex;</b> 
+      
+            height: 400px;
+            max-width: 700px;
+            margin-bottom: 40px auto 40px auto;
+            background-color:green;
+      }
+      
+      .center-me {
+            color :white;
+            font-size: 50px;
+      
+       <b> margin: auto;</b>
+
+      }
+
+      &lt;/style&gt;
+      
+
+
+      &lt;div class=&quot;<b>banner</b>&quot;&gt;
+
+          &lt;span class=&quot;<b>center-me</b>&quot;&gt;
+              Center me ... 
+          &lt;/span&gt;
+
+      &lt;/div&gt;
+    </pre>
+</code>
+
 <div class="banner">
     <span class="center-me">
         Center me ... 
