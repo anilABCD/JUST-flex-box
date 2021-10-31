@@ -167,9 +167,9 @@
 
     &lt;style&gt;
 
-    .call-outs-container{
+    .container{
 
-        display: flex;
+        <b>display : flex;</b>
 
         <b>justify-content: space-between;</b>
 
@@ -177,7 +177,7 @@
 
     }
 
-    .call-out{
+    .child{
 
         padding: 20px;
         box-sizing: border-box;
@@ -188,15 +188,15 @@
 
     }
 
-    .call-out:nth-child(1) {
+    .child:nth-child(1) {
         background-color: #c0dbe2;
     }
 
-    .call-out:nth-child(2){
+    .child:nth-child(2){
         background-color: #cdf1c3;
     }
 
-    .call-out:nth-child(3){
+    .child:nth-child(3){
         background-color: #ccb9da;
     }
   
@@ -204,21 +204,21 @@
 
 
 
-    &lt;div class=&quot;<b>call-outs-container</b>&quot;&gt;
+    &lt;div class=&quot;<b>container</b>&quot;&gt;
     
-    &lt;div class=&quot;<b>call-out</b>&quot;&gt;
+    &lt;div class=&quot;<b>child</b>&quot;&gt;
         &lt;h3&gt;Call Out 1&lt;/h3&gt;
         industry's ... 
     &lt;/div&gt;
     
     
-    &lt;div class=&quot;call-out&quot;&gt;
+    &lt;div class=&quot;child&quot;&gt;
         &lt;h3&gt;Call Out 2&lt;/h3&gt;
         been ... 
     &lt;/div&gt;
     
     
-    &lt;div class=&quot;call-out&quot;&gt;
+    &lt;div class=&quot;child&quot;&gt;
         &lt;h3&gt;Call Out 3&lt;/h3&gt;
         Text of ... 
     &lt;/div&gt;
@@ -311,9 +311,9 @@
 
         &lt;style&gt;
 
-        .flex-fixed-w-h-new{
+        .container{
 
-            display: flex;
+            <b>display : flex;</b>
         
             padding: 20px;
             margin: 20px;
@@ -322,7 +322,7 @@
             <b>flex-wrap: wrap;</b>
         }
         
-        .flex-child{
+        .child{
 
             width : 150px;
             height: 100px;
@@ -340,21 +340,21 @@
         
 
 
-        &lt;div class=&quot;<b>flex-fixed-w-h-new</b>&quot;&gt;
+        &lt;div class=&quot;<b>container</b>&quot;&gt;
         
-            &lt;div class=&quot;<b>flex-child</b>&quot;&gt;
+            &lt;div class=&quot;<b>child</b>&quot;&gt;
                 1
             &lt;/div&gt;
         
-            &lt;div class=&quot;flex-child&quot;&gt;
+            &lt;div class=&quot;child&quot;&gt;
                 2
             &lt;/div&gt;
         
-            &lt;div class=&quot;flex-child&quot;&gt;
+            &lt;div class=&quot;child&quot;&gt;
                 3
             &lt;/div&gt;
         
-            &lt;div class=&quot;flex-child&quot;&gt;
+            &lt;div class=&quot;child&quot;&gt;
                 4
             &lt;/div&gt;
         
@@ -402,9 +402,9 @@
 
       &lt;style&gt;
 
-      .banner {
+      .container {
 
-       <b> display: flex;</b> 
+            <b>display: flex;</b> 
       
             height: 400px;
             max-width: 700px;
@@ -412,21 +412,21 @@
             background-color:green;
       }
       
-      .center-me {
+      .child {
+
+            <b>margin: auto;</b>
+
             color :white;
             font-size: 50px;
-      
-       <b> margin: auto;</b>
-
       }
 
       &lt;/style&gt;
       
 
 
-      &lt;div class=&quot;<b>banner</b>&quot;&gt;
+      &lt;div class=&quot;<b>container</b>&quot;&gt;
 
-          &lt;span class=&quot;<b>center-me</b>&quot;&gt;
+          &lt;span class=&quot;<b>child</b>&quot;&gt;
               Center me ... 
           &lt;/span&gt;
 
@@ -483,6 +483,92 @@
 </style>
 
 <h2 class="heading"> In-Container Equal Hight Columns Example : </h2>
+
+<code>
+
+    <pre>
+
+        &lt;style&gt;
+
+        .container{
+
+            <b>display: flex;</b>
+
+            max-width: 698px;
+         
+        }
+    
+        .child{
+           
+            <b>flex:1;</b>
+
+            padding: 20px;
+            background-color: rgb(194, 183, 183);
+    
+        }
+    
+        .child.in-container{
+
+           <b>
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+           </b>
+        }
+    
+        .in-child-a{
+
+            <b>flex: 1;</b>
+    
+            background-color: yellow;
+            padding: 10px;
+        }
+    
+        .in-child-b{
+
+            <b>flex: 1;</b>
+
+            background-color: #c0dbe2;
+            padding: 10px;
+        }
+    
+    &lt;/style&gt;
+    
+    &lt;div class=&quot;<b>container</b>&quot;&gt;
+    
+    &lt;div class=&quot;<b>child</b>&quot;&gt;
+        
+        &lt;p&gt;
+            Lorem ... <b>large text</b>
+        &lt;/p&gt;
+        
+        &lt;p&gt;
+            It is ... <b>large text</b>
+        &lt;/p&gt;
+        
+        &lt;p&gt;
+            There are ... <b>large text</b>
+        &lt;/p&gt;
+        
+        &lt;p&gt;
+            This is a ... <b>large text</b> 
+        &lt;/p&gt;
+        
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;<b>child in-container</b>&quot;&gt;
+
+        &lt;div class=&quot;<b>in-child-a</b>&quot;&gt;A&lt;/div&gt;
+
+        &lt;div class=&quot;<b>in-child-b</b>&quot;&gt;B&lt;/div&gt;
+
+    &lt;/div&gt;
+    
+    &lt;/div&gt;
+    </pre>
+</code>
+
+
 
 <div class="equal-height-container">
 
