@@ -1,0 +1,32 @@
+body {
+  margin: 0 300px;
+}
+
+@media (max-width: 1600px) {
+  body {
+    margin: 0 20px;
+  }
+}
+h1.topbanner {
+  text-align: center;
+  color: tomato;
+}
+
+h1.topbanner em {
+  font-size: x-small;
+  padding-right: 2px;
+}
+
+h1.topbanner :nth-child(2) {
+  color: darkcyan;
+}
+
+h2.heading {
+  color: #2b2be6;
+}
+
+code b {
+  font-size: large;
+}
+
+/*# sourceMappingURL=common-style.css.map */
